@@ -1,9 +1,10 @@
-[gd_scene load_steps=31 format=3 uid="uid://cs510lpxxxxwi"]
+[gd_scene load_steps=32 format=3 uid="uid://cs510lpxxxxwi"]
 
+[ext_resource type="Script" path="res://character_body_2d.gd" id="1_fw0v1"]
 [ext_resource type="Texture2D" uid="uid://bhe0viou0sh8h" path="res://satyr-Sheet.png" id="1_sr25p"]
 
-[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_1t61u"]
-radius = 9.0
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lm4f"]
+size = Vector2(288.5, 65)
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_8cy01"]
 atlas = ExtResource("1_sr25p")
@@ -214,21 +215,22 @@ animations = [{
 }],
 "loop": true,
 "name": &"quiet",
-"speed": 9.0
+"speed": 12.0
 }]
 
 [node name="PERSONATGE PRINCIPAL" type="CharacterBody2D"]
 position = Vector2(67, 25)
+script = ExtResource("1_fw0v1")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(-33, -17)
-shape = SubResource("CapsuleShape2D_1t61u")
+position = Vector2(285.25, 361.5)
+shape = SubResource("RectangleShape2D_4lm4f")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(455, 282)
+position = Vector2(246, 155)
 scale = Vector2(26.3906, 21.6875)
 sprite_frames = SubResource("SpriteFrames_8sby1")
-animation = &"quiet"
+animation = &"córrer"
 autoplay = "quiet"
-frame_progress = 0.0796723
+frame_progress = 0.834889
