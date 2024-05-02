@@ -9,4 +9,4 @@
 position = Vector2(0, -2)
 
 [node name="PERSONATGE PRINCIPAL" parent="." instance=ExtResource("2_jkxux")]
-position = Vector2(46, 6)
+position = Vector2(45, 6)

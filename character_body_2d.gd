@@ -1,34 +1,45 @@
 extends CharacterBody2D
 
 
-const SPEED = 300.0
-const JUMP_VELOCITY = -400.0
+const max_speed = 400.0
+const accel = 1500.0
+const friction = 600
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
 # Get the gravity from the project settings to be synced with RigidBody nodes.
-var gravity = ProjectSettings.get_setting("physics/2d/default_gravity")
+var input = Vector2.ZERO
 
 
 func _physics_process(delta):
 	# Add the gravity.
-	if (velocity.x > 1 || velocity.x < -1) :
-		animated_sprite_2d.animation = "córrer"
-	else:
-		animated_sprite_2d.animation = "quiet"
-		
-	# Handle jump.
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
-		velocity.y = JUMP_VELOCITY
+	animacion()
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
-	var direction = Input.get_axis("ui_left", "ui_right")
-	if direction:
-		velocity.x = direction * SPEED
+	var directionx = Input.get_axis("ui_left", "ui_right")
+	if directionx:
+		velocity.x = directionx * max_speed
 	else:
-		velocity.x = move_toward(velocity.x, 0, SPEED)
-
+		velocity.x = move_toward(velocity.x, 0, max_speed)
+	var directiony = Input.get_axis("up","down")
+	if directiony :
+		velocity.y = directiony * max_speed
+	else:
+		velocity.y = move_toward(velocity.y, 0, max_speed)
+	
 	move_and_slide()
 
-	var isLeft = velocity.x <0
-	animated_sprite_2d.flip_h = isLeft
+	
+func animacion():
+	if (velocity.x < 0 and velocity.y==0) :
+		animated_sprite_2d.animation = "esquerra"
+		$AnimatedSprite2D.flip_h=false
+	elif (velocity.x > 0 and velocity.y==0):
+		animated_sprite_2d.animation = "esquerra"
+		$AnimatedSprite2D.flip_h=true
+	elif (velocity.y < 0 and velocity.x==0):
+		animated_sprite_2d.animation = "adalt"
+	else:
+		animated_sprite_2d.animation = "quiet"
+	
+	
