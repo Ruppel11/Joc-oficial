@@ -3,9 +3,6 @@
 [ext_resource type="Script" path="res://character_body_2d.gd" id="1_fw0v1"]
 [ext_resource type="Texture2D" uid="uid://jbiidpmyef5p" path="res://Jeremy/Jeremy_Green.png" id="2_seln1"]
 
-[sub_resource type="RectangleShape2D" id="RectangleShape2D_4lm4f"]
-size = Vector2(31, 15)
-
 [sub_resource type="AtlasTexture" id="AtlasTexture_dvdrl"]
 atlas = ExtResource("2_seln1")
 region = Rect2(0, 96, 32, 32)
@@ -87,17 +84,17 @@ animations = [{
 "speed": 8.0
 }]
 
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_dpq0h"]
+radius = 6.25317
+height = 33.903
+
 [node name="PERSONATGE PRINCIPAL" type="CharacterBody2D"]
 position = Vector2(67, 25)
 script = ExtResource("1_fw0v1")
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
-position = Vector2(148, 370)
-shape = SubResource("RectangleShape2D_4lm4f")
-
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(146, 327)
+position = Vector2(149, 326)
 scale = Vector2(3.29101, 3.1875)
 sprite_frames = SubResource("SpriteFrames_6277v")
 animation = &"esquerra"
@@ -106,3 +103,8 @@ frame_progress = 0.725202
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(143, 317)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(149, 368)
+rotation = -1.53385
+shape = SubResource("CapsuleShape2D_dpq0h")
