@@ -1,8 +1,9 @@
-[gd_scene load_steps=4 format=3 uid="uid://srcyvjmu5l4r"]
+[gd_scene load_steps=5 format=3 uid="uid://srcyvjmu5l4r"]
 
 [ext_resource type="Texture2D" uid="uid://bygvj62i8hcbo" path="res://download.jpg" id="1_qt0nt"]
 [ext_resource type="PackedScene" uid="uid://cxvxt82yitsml" path="res://node_2d.tscn" id="1_w0kxv"]
 [ext_resource type="PackedScene" uid="uid://cs510lpxxxxwi" path="res://character_body_2d.tscn" id="2_jkxux"]
+[ext_resource type="PackedScene" uid="uid://ctcpcjvvk4dw0" path="res://cofre.tscn" id="4_m6h8y"]
 
 [node name="MAIN SCENE" type="Node"]
 
@@ -17,3 +18,5 @@ texture = ExtResource("1_qt0nt")
 
 [node name="PERSONATGE PRINCIPAL" parent="." instance=ExtResource("2_jkxux")]
 position = Vector2(134, 565)
+
+[node name="cofre" parent="." instance=ExtResource("4_m6h8y")]
