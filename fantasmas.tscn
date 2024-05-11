@@ -1,0 +1,42 @@
+[gd_scene load_steps=8 format=3 uid="uid://8g8unwfq8rml"]
+
+[ext_resource type="Texture2D" uid="uid://b5cdhtw7e2a80" path="res://round ghost/round ghost walk/sprite_0.png" id="1_hu70e"]
+[ext_resource type="Texture2D" uid="uid://dku2evdbgnmt3" path="res://round ghost/round ghost walk/sprite_1.png" id="2_4185t"]
+[ext_resource type="Texture2D" uid="uid://nknbga28gbiu" path="res://round ghost/round ghost walk/sprite_2.png" id="3_3xdip"]
+[ext_resource type="Texture2D" uid="uid://ckoxqe57klbic" path="res://round ghost/round ghost walk/sprite_3.png" id="4_1avbf"]
+[ext_resource type="Texture2D" uid="uid://b0i1a33l3lmxy" path="res://round ghost/round ghost walk/sprite_4.png" id="5_hebno"]
+[ext_resource type="Texture2D" uid="uid://dyi73f1j5t631" path="res://round ghost/round ghost walk/sprite_5.png" id="6_rft7q"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jdal7"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("1_hu70e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("2_4185t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_3xdip")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_1avbf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_hebno")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_rft7q")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}]
+
+[node name="Fantasmas" type="Node2D"]
+
+[node name="Sprite0" type="AnimatedSprite2D" parent="."]
+position = Vector2(375, 493.75)
+scale = Vector2(6.75, 5.7)
+sprite_frames = SubResource("SpriteFrames_jdal7")
+frame_progress = 0.945993
