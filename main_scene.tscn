@@ -8,15 +8,17 @@
 [node name="MAIN SCENE" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -4561.0
-offset_top = -1676.0
-offset_right = 8032.0
-offset_bottom = 7830.0
+offset_left = -4582.0
+offset_top = -1652.0
+offset_right = 8011.0
+offset_bottom = 7854.0
 texture = ExtResource("1_qt0nt")
 
 [node name="Node2D" parent="." instance=ExtResource("1_w0kxv")]
 
 [node name="PERSONATGE PRINCIPAL" parent="." instance=ExtResource("2_jkxux")]
-position = Vector2(134, 565)
+position = Vector2(300, 417)
 
 [node name="cofre" parent="." instance=ExtResource("4_m6h8y")]
+position = Vector2(444, 369)
+scale = Vector2(3.14881, 2.98611)
