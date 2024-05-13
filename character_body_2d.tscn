@@ -88,8 +88,8 @@ animations = [{
 radius = 6.25317
 height = 33.903
 
-[node name="PERSONATGE PRINCIPAL" type="CharacterBody2D"]
-position = Vector2(67, 25)
+[node name="player" type="CharacterBody2D"]
+position = Vector2(-149, -364)
 script = ExtResource("1_fw0v1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
@@ -105,6 +105,7 @@ frame_progress = 0.725202
 position = Vector2(143, 317)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+light_mask = 3
 position = Vector2(149, 368)
 rotation = -1.53385
 shape = SubResource("CapsuleShape2D_dpq0h")

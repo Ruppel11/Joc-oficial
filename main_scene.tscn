@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://srcyvjmu5l4r"]
+[gd_scene load_steps=6 format=3 uid="uid://srcyvjmu5l4r"]
 
 [ext_resource type="Texture2D" uid="uid://bygvj62i8hcbo" path="res://download.jpg" id="1_qt0nt"]
 [ext_resource type="PackedScene" uid="uid://cxvxt82yitsml" path="res://node_2d.tscn" id="1_w0kxv"]
 [ext_resource type="PackedScene" uid="uid://cs510lpxxxxwi" path="res://character_body_2d.tscn" id="2_jkxux"]
 [ext_resource type="PackedScene" uid="uid://ctcpcjvvk4dw0" path="res://cofre.tscn" id="4_m6h8y"]
+[ext_resource type="PackedScene" uid="uid://8g8unwfq8rml" path="res://fantasmas.tscn" id="5_os1b2"]
 
 [node name="MAIN SCENE" type="Node"]
 
@@ -22,3 +23,6 @@ position = Vector2(300, 417)
 [node name="cofre" parent="." instance=ExtResource("4_m6h8y")]
 position = Vector2(444, 369)
 scale = Vector2(3.14881, 2.98611)
+
+[node name="Fantasmas" parent="." instance=ExtResource("5_os1b2")]
+position = Vector2(854, 1150)
