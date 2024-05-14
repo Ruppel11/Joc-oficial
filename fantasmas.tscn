@@ -155,7 +155,7 @@ animations = [{
 }]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_r73a1"]
-radius = 272.0
+radius = 452.747
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_ikm1h"]
 radius = 23.0
@@ -169,8 +169,7 @@ script = ExtResource("1_et4ec")
 position = Vector2(2, 0)
 scale = Vector2(2.6, 2.53595)
 sprite_frames = SubResource("SpriteFrames_jdal7")
-animation = &"taking_damage"
-frame_progress = 0.340424
+animation = &"walk"
 offset = Vector2(0, -8)
 
 [node name="detection area" type="Area2D" parent="."]
