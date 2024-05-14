@@ -6,7 +6,7 @@ const accel = 1500.0
 const friction = 600
 @onready var animated_sprite_2d = $AnimatedSprite2D
 
-# Get the gravity from the project settings to be synced with RigidBody nodes.
+@onready var MenuPause : Node2D = $MenuPause
 var input = Vector2.ZERO
 
 
@@ -43,3 +43,15 @@ func animacion():
 		animated_sprite_2d.animation = "quiet"
 	
 	
+func _on_pause_button_pressed():
+	get_tree().paused = true
+	MenuPause.visible = get_tree().paused
+
+
+func _on_restart_pressed():
+	get_tree().reload_current_scene()
+
+
+func _on_resum_pressed():
+	get_tree().paused=false
+	MenuPause.visible = get_tree().paused

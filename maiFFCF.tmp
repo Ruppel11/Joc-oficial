@@ -22,10 +22,10 @@ texture = ExtResource("1_qt0nt")
 position = Vector2(337, 423)
 
 [node name="PauseButton" type="Button" parent="PERSONATGE PRINCIPAL"]
-offset_left = 987.0
-offset_top = -664.0
-offset_right = 1079.0
-offset_bottom = -625.0
+offset_left = 358.0
+offset_top = -252.0
+offset_right = 450.0
+offset_bottom = -213.0
 scale = Vector2(1.08907, 1.09463)
 text = "Pause"
 
