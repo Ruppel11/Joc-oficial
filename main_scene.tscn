@@ -9,10 +9,10 @@
 [node name="MAIN SCENE" type="Node"]
 
 [node name="TextureRect" type="TextureRect" parent="."]
-offset_left = -4582.0
-offset_top = -2503.0
-offset_right = 8011.0
-offset_bottom = 7854.0
+offset_left = -4537.0
+offset_top = -2197.0
+offset_right = 8056.0
+offset_bottom = 8160.0
 texture = ExtResource("1_qt0nt")
 
 [node name="Node2D" parent="." instance=ExtResource("1_w0kxv")]
