@@ -25,4 +25,4 @@ position = Vector2(444, 369)
 scale = Vector2(3.14881, 2.98611)
 
 [node name="Fantasmas" parent="." instance=ExtResource("5_os1b2")]
-position = Vector2(854, 1150)
+position = Vector2(992, 1078)
