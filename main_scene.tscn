@@ -10,7 +10,7 @@
 
 [node name="TextureRect" type="TextureRect" parent="."]
 offset_left = -4582.0
-offset_top = -1652.0
+offset_top = -2503.0
 offset_right = 8011.0
 offset_bottom = 7854.0
 texture = ExtResource("1_qt0nt")
@@ -18,11 +18,32 @@ texture = ExtResource("1_qt0nt")
 [node name="Node2D" parent="." instance=ExtResource("1_w0kxv")]
 
 [node name="PERSONATGE PRINCIPAL" parent="." instance=ExtResource("2_jkxux")]
-position = Vector2(300, 417)
+position = Vector2(337, 423)
 
 [node name="cofre" parent="." instance=ExtResource("4_m6h8y")]
 position = Vector2(444, 369)
 scale = Vector2(3.14881, 2.98611)
 
 [node name="Fantasmas" parent="." instance=ExtResource("5_os1b2")]
-position = Vector2(992, 1078)
+position = Vector2(1054, 1075)
+
+[node name="Fantasmas2" parent="." instance=ExtResource("5_os1b2")]
+position = Vector2(-890, -814)
+
+[node name="Fantasmas3" parent="." instance=ExtResource("5_os1b2")]
+position = Vector2(808, -523)
+
+[node name="Fantasmas4" parent="." instance=ExtResource("5_os1b2")]
+position = Vector2(643, 2350)
+
+[node name="Fantasmas5" parent="." instance=ExtResource("5_os1b2")]
+position = Vector2(5894, 1316)
+
+[node name="Fantasmas6" parent="." instance=ExtResource("5_os1b2")]
+position = Vector2(3184, -952)
+
+[node name="Fantasmas7" parent="." instance=ExtResource("5_os1b2")]
+position = Vector2(487, 2841)
+
+[node name="Fantasmas8" parent="." instance=ExtResource("5_os1b2")]
+position = Vector2(1700, 2673)
