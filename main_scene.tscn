@@ -47,3 +47,15 @@ position = Vector2(487, 2841)
 
 [node name="Fantasmas8" parent="." instance=ExtResource("5_os1b2")]
 position = Vector2(1700, 2673)
+
+[node name="Chest" parent="." instance=ExtResource("4_m6h8y")]
+position = Vector2(402, 2382)
+scale = Vector2(3.40476, 2.77778)
+
+[node name="Chest2" parent="." instance=ExtResource("4_m6h8y")]
+position = Vector2(1896, 1483)
+scale = Vector2(2.82143, 3.05556)
+
+[node name="Chest3" parent="." instance=ExtResource("4_m6h8y")]
+position = Vector2(3428, 35)
+scale = Vector2(2.97619, 3.33333)

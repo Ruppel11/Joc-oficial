@@ -103,6 +103,7 @@ frame_progress = 0.725202
 
 [node name="Camera2D" type="Camera2D" parent="."]
 position = Vector2(143, 317)
+zoom = Vector2(1.25, 1.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
