@@ -89,24 +89,23 @@ radius = 6.25317
 height = 33.903
 
 [node name="player" type="CharacterBody2D"]
-position = Vector2(-149, -364)
+collision_layer = 3
 script = ExtResource("1_fw0v1")
 
 [node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
 texture_filter = 1
-position = Vector2(149, 326)
+position = Vector2(-1, -43)
 scale = Vector2(3.29101, 3.1875)
 sprite_frames = SubResource("SpriteFrames_6277v")
-animation = &"esquerra"
+animation = &"adalt"
 autoplay = "quiet"
-frame_progress = 0.725202
+frame_progress = 0.133206
 
 [node name="Camera2D" type="Camera2D" parent="."]
-position = Vector2(143, 317)
 zoom = Vector2(1.25, 1.25)
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
 light_mask = 3
-position = Vector2(149, 368)
+position = Vector2(-4.76837e-07, -2.97878e-08)
 rotation = -1.53385
 shape = SubResource("CapsuleShape2D_dpq0h")

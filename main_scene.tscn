@@ -34,7 +34,7 @@ position = Vector2(-890, -814)
 position = Vector2(808, -523)
 
 [node name="Fantasmas4" parent="." instance=ExtResource("5_os1b2")]
-position = Vector2(643, 2350)
+position = Vector2(656, 2360)
 
 [node name="Fantasmas5" parent="." instance=ExtResource("5_os1b2")]
 position = Vector2(5894, 1316)
@@ -43,7 +43,7 @@ position = Vector2(5894, 1316)
 position = Vector2(3184, -952)
 
 [node name="Fantasmas7" parent="." instance=ExtResource("5_os1b2")]
-position = Vector2(487, 2841)
+position = Vector2(-617, 2484)
 
 [node name="Fantasmas8" parent="." instance=ExtResource("5_os1b2")]
 position = Vector2(1700, 2673)
