@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://qetc5ewatttl"]
 
 [ext_resource type="Script" path="res://menu.gd" id="1_rbujr"]
-[ext_resource type="Texture2D" uid="uid://b3a781a1r1r63" path="res://Haunted Henhouse Pack/HauntedHenhouse_19.jpg" id="1_tp300"]
+[ext_resource type="Texture2D" uid="uid://65ipp3dm7me4" path="res://Package (1)/Package/HauntedHenhouse_19.jpg" id="1_tp300"]
 
 [sub_resource type="SystemFont" id="SystemFont_ktcb0"]
 font_names = PackedStringArray("Blackadder ITC")
