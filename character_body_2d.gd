@@ -1,6 +1,6 @@
 extends CharacterBody2D
 
-
+var num_key = 0
 const max_speed = 400.0
 const accel = 1500.0
 const friction = 600
