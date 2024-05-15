@@ -31,16 +31,22 @@ func _physics_process(delta):
 
 	
 func animacion():
-	if (velocity.x < 0 and velocity.y==0) :
+	if Input.is_action_just_pressed("atac"):
+		animated_sprite_2d.animation = "ataque"
+	
+	if (velocity.x < 0 ) and Input.is_action_just_pressed("atac")==false :
 		animated_sprite_2d.animation = "esquerra"
 		$AnimatedSprite2D.flip_h=false
-	elif (velocity.x > 0 and velocity.y==0):
+	if (velocity.x > 0) and Input.is_action_just_pressed("atac")==false:
 		animated_sprite_2d.animation = "esquerra"
 		$AnimatedSprite2D.flip_h=true
-	elif (velocity.y < 0 and velocity.x==0):
+	if (velocity.y < 0) and Input.is_action_just_pressed("atac")==false:
 		animated_sprite_2d.animation = "adalt"
-	else:
+		
+	if (velocity.y == 0 and velocity.x == 0 and Input.is_action_just_pressed("atac")==false):
 		animated_sprite_2d.animation = "quiet"
+ # Llama a la función de animación en cada frame
+	
 	
 	
 func _on_pause_button_pressed():
