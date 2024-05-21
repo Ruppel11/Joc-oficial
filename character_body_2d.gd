@@ -1,5 +1,11 @@
 extends CharacterBody2D
 
+var fantasmas_inattack_range = false
+var fantasmas_attack_cooldown = true
+var health = 100
+var player_alive = true
+
+
 var num_key = 0
 const max_speed = 400.0
 const accel = 1500.0
@@ -13,6 +19,14 @@ var input = Vector2.ZERO
 func _physics_process(delta):
 	# Add the gravity.
 	animacion()
+	fantasmas_attack()
+	
+	if health <= 0:
+		player_alive = false #muerte del personaje
+		health = 0
+		print("player has been killed")
+		self.queue_free()
+		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -60,5 +74,32 @@ func _on_restart_pressed():
 
 
 func _on_resum_pressed():
-	get_tree().paused=false
+	get_tree().paused = false
 	MenuPause.visible = get_tree().paused
+
+
+func player():
+	pass
+
+
+func _on_players_hitbox_body_entered(body):
+	if body.has_method("fantasmas"):
+		fantasmas_inattack_range = true
+
+
+func _on_players_hitbox_body_exited(body):
+	if body.has_method("fantasmas"):
+		fantasmas_inattack_range = false
+		
+		
+func fantasmas_attack():
+	if fantasmas_inattack_range and fantasmas_attack_cooldown == true:
+		health = health - 20
+		fantasmas_attack_cooldown = false
+		$attack_cooldown.start()
+		print(health)
+		
+
+
+func _on_atack_cooldown_timeout():
+	fantasmas_attack_cooldown = true
