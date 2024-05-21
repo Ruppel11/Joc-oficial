@@ -3,6 +3,7 @@ extends CharacterBody2D
 var speed = 300
 var player_chase = false
 var player = null
+var attack_t_player = false
 
 func _physics_process(delta):
 	if player_chase:
@@ -17,6 +18,7 @@ func _physics_process(delta):
 		$Sprite0.play("idle")
 	move_and_collide(velocity)
 	
+	
 		
 
 
@@ -28,7 +30,14 @@ func _on_detection_area_body_entered(body):
 func _on_detection_area_body_exited(body):
 	player = null
 	player_chase = false
+	
+
+
 
 
 func fantasmas():
 	pass
+
+
+	
+

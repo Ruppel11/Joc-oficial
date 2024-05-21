@@ -5,7 +5,6 @@ var fantasmas_attack_cooldown = true
 var health = 100
 var player_alive = true
 
-
 var num_key = 0
 const max_speed = 400.0
 const accel = 1500.0
@@ -26,6 +25,8 @@ func _physics_process(delta):
 		health = 0
 		print("player has been killed")
 		self.queue_free()
+		get_tree().change_scene_to_file("res://menu_principal.tscn")
+		
 		
 
 	# Get the input direction and handle the movement/deceleration.
@@ -48,7 +49,7 @@ func animacion():
 	if Input.is_action_just_pressed("atac"):
 		animated_sprite_2d.animation = "ataque"
 	
-	if (velocity.x < 0 ) and Input.is_action_just_pressed("atac")==false :
+	if (velocity.x < 0 ) and Input.is_action_just_pressed("atac")==false:
 		animated_sprite_2d.animation = "esquerra"
 		$AnimatedSprite2D.flip_h=false
 	if (velocity.x > 0) and Input.is_action_just_pressed("atac")==false:
@@ -81,13 +82,14 @@ func player():
 	pass
 
 
-func _on_players_hitbox_body_entered(body):
-	if body.has_method("fantasmas"):
+func _on_player_hitbox_area_entered(area):
+	if area.is_in_group("fantasmas"):
 		fantasmas_inattack_range = true
+		
 
 
-func _on_players_hitbox_body_exited(body):
-	if body.has_method("fantasmas"):
+func _on_player_hitbox_area_exited(area):
+	if area.is_in_group("fantasmas"):
 		fantasmas_inattack_range = false
 		
 		
@@ -102,3 +104,6 @@ func fantasmas_attack():
 
 func _on_atack_cooldown_timeout():
 	fantasmas_attack_cooldown = true
+
+
+
