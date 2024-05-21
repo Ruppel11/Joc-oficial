@@ -16,10 +16,10 @@ offset_right = 8808.0
 offset_bottom = 7418.0
 texture = ExtResource("1_qt0nt")
 
-[node name="Node2D" parent="." instance=ExtResource("1_w0kxv")]
+[node name="Mapaaa" parent="." instance=ExtResource("1_w0kxv")]
 
 [node name="Fantasmas" parent="." instance=ExtResource("5_os1b2")]
-position = Vector2(1054, 1075)
+position = Vector2(1054, 1076)
 
 [node name="Fantasmas2" parent="." instance=ExtResource("5_os1b2")]
 position = Vector2(-890, -814)
@@ -66,10 +66,10 @@ position = Vector2(-1878, 2221)
 [node name="Cofre8" parent="." instance=ExtResource("6_m1hxh")]
 position = Vector2(-1547, -1273)
 
-[node name="PERSONATGE PRINCIPAL" parent="." instance=ExtResource("2_jkxux")]
-position = Vector2(337, 423)
+[node name="player" parent="." instance=ExtResource("2_jkxux")]
+position = Vector2(429, 585)
 
-[node name="PauseButton" type="Button" parent="PERSONATGE PRINCIPAL"]
+[node name="PauseButton" type="Button" parent="player"]
 offset_left = 987.0
 offset_top = -664.0
 offset_right = 1079.0
@@ -77,11 +77,11 @@ offset_bottom = -625.0
 scale = Vector2(1.08907, 1.09463)
 text = "Pause"
 
-[node name="MenuPause" type="Node2D" parent="PERSONATGE PRINCIPAL"]
+[node name="MenuPause" type="Node2D" parent="player"]
 visible = false
 script = ExtResource("4_atmgf")
 
-[node name="ColorRect" type="ColorRect" parent="PERSONATGE PRINCIPAL/MenuPause"]
+[node name="ColorRect" type="ColorRect" parent="player/MenuPause"]
 anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
@@ -95,7 +95,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.980392)
 
-[node name="Label" type="Label" parent="PERSONATGE PRINCIPAL/MenuPause"]
+[node name="Label" type="Label" parent="player/MenuPause"]
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
@@ -108,7 +108,7 @@ size_flags_horizontal = 4
 text = "Menu de Pausa
 "
 
-[node name="Resum" type="Button" parent="PERSONATGE PRINCIPAL/MenuPause"]
+[node name="Resum" type="Button" parent="player/MenuPause"]
 process_mode = 3
 anchors_preset = 8
 anchor_left = 0.5
@@ -123,7 +123,7 @@ grow_horizontal = 2
 grow_vertical = 2
 text = "Resum"
 
-[node name="Restart" type="Button" parent="PERSONATGE PRINCIPAL/MenuPause"]
+[node name="Restart" type="Button" parent="player/MenuPause"]
 process_mode = 3
 anchors_preset = 5
 anchor_left = 0.5
@@ -136,6 +136,6 @@ grow_horizontal = 2
 text = "Restart
 "
 
-[connection signal="pressed" from="PERSONATGE PRINCIPAL/PauseButton" to="PERSONATGE PRINCIPAL" method="_on_pause_button_pressed"]
-[connection signal="pressed" from="PERSONATGE PRINCIPAL/MenuPause/Resum" to="PERSONATGE PRINCIPAL" method="_on_resum_pressed"]
-[connection signal="pressed" from="PERSONATGE PRINCIPAL/MenuPause/Restart" to="PERSONATGE PRINCIPAL" method="_on_restart_pressed"]
+[connection signal="pressed" from="player/PauseButton" to="player" method="_on_pause_button_pressed"]
+[connection signal="pressed" from="player/MenuPause/Resum" to="player" method="_on_resum_pressed"]
+[connection signal="pressed" from="player/MenuPause/Restart" to="player" method="_on_restart_pressed"]
