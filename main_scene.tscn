@@ -19,7 +19,6 @@ texture = ExtResource("1_qt0nt")
 [node name="Mapaaa" parent="." instance=ExtResource("1_w0kxv")]
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 [node name="Fantasmas" parent="." instance=ExtResource("5_os1b2")]
 position = Vector2(1054, 1076)
 
@@ -71,8 +70,6 @@ position = Vector2(-1547, -1273)
 [node name="player" parent="." instance=ExtResource("2_jkxux")]
 position = Vector2(429, 585)
 =======
-=======
->>>>>>> parent of 354e0fb (8 Cofres amb Claus)
 [node name="PERSONATGE PRINCIPAL" parent="." instance=ExtResource("2_jkxux")]
 position = Vector2(337, 423)
 >>>>>>> parent of 354e0fb (8 Cofres amb Claus)
@@ -145,13 +142,10 @@ text = "Restart
 "
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 [connection signal="pressed" from="player/PauseButton" to="player" method="_on_pause_button_pressed"]
 [connection signal="pressed" from="player/MenuPause/Resum" to="player" method="_on_resum_pressed"]
 [connection signal="pressed" from="player/MenuPause/Restart" to="player" method="_on_restart_pressed"]
 =======
-=======
->>>>>>> parent of 354e0fb (8 Cofres amb Claus)
 [node name="cofre" parent="." instance=ExtResource("4_m6h8y")]
 position = Vector2(444, 369)
 scale = Vector2(3.14881, 2.98611)

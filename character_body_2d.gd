@@ -1,16 +1,12 @@
 extends CharacterBody2D
 
 <<<<<<< HEAD
-<<<<<<< HEAD
 var fantasmas_inattack_range = false
 var fantasmas_attack_cooldown = true
 var health = 100
 var player_alive = true
 
 var num_key = 0
-=======
-
->>>>>>> parent of 354e0fb (8 Cofres amb Claus)
 =======
 
 >>>>>>> parent of 354e0fb (8 Cofres amb Claus)
