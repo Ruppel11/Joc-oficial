@@ -1,15 +1,6 @@
 extends CharacterBody2D
 
-<<<<<<< HEAD
-var fantasmas_inattack_range = false
-var fantasmas_attack_cooldown = true
-var health = 100
-var player_alive = true
-
 var num_key = 0
-=======
-
->>>>>>> parent of 354e0fb (8 Cofres amb Claus)
 const max_speed = 400.0
 const accel = 1500.0
 const friction = 600
@@ -22,16 +13,6 @@ var input = Vector2.ZERO
 func _physics_process(delta):
 	# Add the gravity.
 	animacion()
-	fantasmas_attack()
-	
-	if health <= 0:
-		player_alive = false #muerte del personaje
-		health = 0
-		print("player has been killed")
-		self.queue_free()
-		get_tree().change_scene_to_file("res://menu_principal.tscn")
-		
-		
 
 	# Get the input direction and handle the movement/deceleration.
 	# As good practice, you should replace UI actions with custom gameplay actions.
@@ -50,22 +31,16 @@ func _physics_process(delta):
 
 	
 func animacion():
-	if Input.is_action_just_pressed("atac"):
-		animated_sprite_2d.animation = "ataque"
-	
-	if (velocity.x < 0 ) and Input.is_action_just_pressed("atac")==false:
+	if (velocity.x < 0 and velocity.y==0) :
 		animated_sprite_2d.animation = "esquerra"
 		$AnimatedSprite2D.flip_h=false
-	if (velocity.x > 0) and Input.is_action_just_pressed("atac")==false:
+	elif (velocity.x > 0 and velocity.y==0):
 		animated_sprite_2d.animation = "esquerra"
 		$AnimatedSprite2D.flip_h=true
-	if (velocity.y < 0) and Input.is_action_just_pressed("atac")==false:
+	elif (velocity.y < 0 and velocity.x==0):
 		animated_sprite_2d.animation = "adalt"
-		
-	if (velocity.y == 0 and velocity.x == 0 and Input.is_action_just_pressed("atac")==false):
+	else:
 		animated_sprite_2d.animation = "quiet"
- # Llama a la función de animación en cada frame
-	
 	
 	
 func _on_pause_button_pressed():
@@ -78,36 +53,5 @@ func _on_restart_pressed():
 
 
 func _on_resum_pressed():
-	get_tree().paused = false
+	get_tree().paused=false
 	MenuPause.visible = get_tree().paused
-
-
-func player():
-	pass
-
-
-func _on_player_hitbox_area_entered(area):
-	if area.is_in_group("fantasmas"):
-		fantasmas_inattack_range = true
-		
-
-
-func _on_player_hitbox_area_exited(area):
-	if area.is_in_group("fantasmas"):
-		fantasmas_inattack_range = false
-		
-		
-func fantasmas_attack():
-	if fantasmas_inattack_range and fantasmas_attack_cooldown == true:
-		health = health - 20
-		fantasmas_attack_cooldown = false
-		$attack_cooldown.start()
-		print(health)
-		
-
-
-func _on_atack_cooldown_timeout():
-	fantasmas_attack_cooldown = true
-
-
-
