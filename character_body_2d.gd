@@ -1,11 +1,15 @@
 extends CharacterBody2D
 
+<<<<<<< HEAD
 var fantasmas_inattack_range = false
 var fantasmas_attack_cooldown = true
 var health = 100
 var player_alive = true
 
 var num_key = 0
+=======
+
+>>>>>>> parent of 354e0fb (8 Cofres amb Claus)
 const max_speed = 400.0
 const accel = 1500.0
 const friction = 600

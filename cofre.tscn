@@ -1,0 +1,57 @@
+[gd_scene load_steps=7 format=3 uid="uid://ctcpcjvvk4dw0"]
+
+[ext_resource type="Texture2D" uid="uid://b6vqjvraude8d" path="res://2D Chests & Coins/Chest.png" id="1_pm2v6"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2hf46"]
+atlas = ExtResource("1_pm2v6")
+region = Rect2(0, 0, 21, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_q2mfj"]
+atlas = ExtResource("1_pm2v6")
+region = Rect2(0, 0, 21, 18)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3ido5"]
+atlas = ExtResource("1_pm2v6")
+region = Rect2(21, 0, 21, 18)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_dygho"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2hf46")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_q2mfj")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3ido5")
+}],
+"loop": false,
+"name": &"obert",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_o3dcd"]
+size = Vector2(17, 16)
+
+[node name="Chest" type="AnimatedSprite2D"]
+texture_filter = 1
+sprite_frames = SubResource("SpriteFrames_dygho")
+animation = &"obert"
+autoplay = "idle"
+
+[node name="Area2D" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
+visible = false
+position = Vector2(-1.5, 0)
+shape = SubResource("RectangleShape2D_o3dcd")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+
+[node name="Node" type="Node" parent="."]
